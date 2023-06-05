@@ -12,7 +12,8 @@ TDD (test driven development cycle)"
 3. Repeat if needed 
 
 """
-from recommenders import MOVIES, random_recommender
+from recommenders import random_recommender
+from utils import MOVIES
 
 def test_movies_are_strings():
     for movie in MOVIES: 

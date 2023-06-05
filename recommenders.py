@@ -3,7 +3,6 @@ In this script we define functions for the recommender web
 application
 """
 import random 
-import sklearn
 from utils import MOVIES, nmf_model, cos_sim_model
 
 def nmf_recommender(query, nmf_model, titles, k=10):
