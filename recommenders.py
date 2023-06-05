@@ -13,7 +13,6 @@ def cos_sim_recommender(query, cos_sim_model, titles, k=10):
     """This is an cosine-similarity-based recommender"""
     return NotImplementedError
 
-
 def random_recommender(k=2):
     random.shuffle(MOVIES)
     top_k = MOVIES[:k]

@@ -27,7 +27,3 @@ def test_for_two_movies():
 def test_for_5_users():
     top5 = random_recommender(5)
     assert len(top5) ==5
-
-    def test_return_0_if_k_is_10():
-        top10 = random_recommender(10)
-        assert len(top10) ==0
