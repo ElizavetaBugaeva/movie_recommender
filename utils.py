@@ -12,7 +12,7 @@ MOVIES = ['John Wick',
 
 
 
-with open('nmf_model1.pkl', 'rb') as file:
+with open('nmf_model_week10.pkl', 'rb') as file:
     nmf_model = pickle.load(file)
 
 with open('cosin_recommender.pkl', 'rb') as file:
