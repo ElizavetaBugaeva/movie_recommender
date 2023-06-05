@@ -4,6 +4,7 @@ data and functions useful for the other scripts
 """
 
 import pickle
+import sklearn
 
 MOVIES = ['John Wick', 
           'Barbie', 
