@@ -11,7 +11,6 @@ MOVIES = ['John Wick',
           ]
 
 
-
 with open('nmf_model_week10.pkl', 'rb') as file:
     nmf_model = pickle.load(file)
 
