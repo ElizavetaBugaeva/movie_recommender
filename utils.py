@@ -13,7 +13,7 @@ movies= pd.read_csv('movies.csv' , sep = ',')
 ratings= pd.read_csv('ratings.csv' , sep = ',')
 query = 'user_query.json'
 df_R = pd.read_csv('user_rating.csv')
-title = pd.read_csv('processed_titles')
+title = pd.read_csv('processed_titles.csv')
 
 
 
