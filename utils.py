@@ -2,7 +2,7 @@
 This scripts contains 
 data and functions useful for the other scripts
 """
-
+pip install pickle
 import pickle
 
 MOVIES = ['John Wick', 

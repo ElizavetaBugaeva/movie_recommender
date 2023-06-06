@@ -15,7 +15,6 @@ TDD (test driven development cycle)"
 
 from utils import MOVIES
 
-
 def test_movies_are_strings():
     for movie in MOVIES: 
         assert isinstance(movie, str)
