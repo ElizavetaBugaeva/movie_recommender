@@ -9,10 +9,8 @@ import pandas as pd
 import json
 
 
-movies= pd.read_csv('/Users/elizavetabugaeva/Documents/Spiced/weekly_milestones/week_10/ml-latest-small/movies.csv' , sep = ',')
-ratings= pd.read_csv('/Users/elizavetabugaeva/Documents/Spiced/weekly_milestones/week_10/ml-latest-small/ratings.csv' , sep = ',')
-links = pd.read_csv('/Users/elizavetabugaeva/Documents/Spiced/weekly_milestones/week_10/ml-latest-small/links.csv' , sep = ',')
-tags = pd.read_csv('/Users/elizavetabugaeva/Documents/Spiced/weekly_milestones/week_10/ml-latest-small/tags.csv' , sep = ',')
+movies= pd.read_csv('movies.csv' , sep = ',')
+ratings= pd.read_csv('ratings.csv' , sep = ',')
 query = 'user_query.json'
 df_R = pd.read_csv('user_rating.csv')
 title = pd.read_csv('processed_titles')
