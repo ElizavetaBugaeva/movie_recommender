@@ -1,6 +1,6 @@
 numpy
 pandas
 streamlit
-streamlit-addgrid
+streamlit-aggrid
 time
 ipython
