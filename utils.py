@@ -14,6 +14,7 @@ ratings= pd.read_csv('ml-latest-small/ratings.csv' , sep = ',')
 links = pd.read_csv('ml-latest-small/links.csv' , sep = ',')
 tags = pd.read_csv('ml-latest-small/tags.csv' , sep = ',')
 query = 'user_query.json'
+df_R = pd.read_csv('user_rating.csv')
 
 
 def convert_json_to_query(query):
