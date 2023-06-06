@@ -1,0 +1,6 @@
+numpy
+pandas
+streamlit
+streamlit-addgrid
+time
+ipython
