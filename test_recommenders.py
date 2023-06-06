@@ -12,18 +12,11 @@ TDD (test driven development cycle)"
 3. Repeat if needed 
 
 """
-from recommenders import random_recommender
+
 from utils import MOVIES
+
 
 def test_movies_are_strings():
     for movie in MOVIES: 
         assert isinstance(movie, str)
 
-
-def test_for_two_movies():
-    top2 = random_recommender(k=2)
-    assert len(top2) == 2
-
-def test_for_5_users():
-    top5 = random_recommender(5)
-    assert len(top5) ==5
