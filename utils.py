@@ -2,7 +2,6 @@
 This scripts contains 
 data and functions useful for the other scripts
 """
-pip install pickle
 import pickle
 
 MOVIES = ['John Wick', 
@@ -10,9 +9,6 @@ MOVIES = ['John Wick',
           'Men in Black',
           ]
 
+nmf_model = 'nmf_model_week10.pkl'
 
-with open('nmf_model_week10.pkl', 'rb') as file:
-    nmf_model = pickle.load(file)
-
-with open('cosin_recommender.pkl', 'rb') as file:
-    cos_sim_model = pickle.load(file)
+cos_sim_model = 'cosin_recommender.pkl'
