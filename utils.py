@@ -15,6 +15,8 @@ links = pd.read_csv('ml-latest-small/links.csv' , sep = ',')
 tags = pd.read_csv('ml-latest-small/tags.csv' , sep = ',')
 query = 'user_query.json'
 df_R = pd.read_csv('user_rating.csv')
+title = pd.read_csv('processed_titles')
+
 
 
 def convert_json_to_query(query):
@@ -71,7 +73,7 @@ def recommend_nmf(query, model, k=10):
     
     # Return the top-k highest rated movie ids or titles
     recommended = R_hat_new_user_filtered.iloc[0].nlargest(k)
-    recommended_movies = titles[titles['movieId'].isin(recommended.index)]
+    recommended_movies = title[title['movieId'].isin(recommended.index)]
 
     return recommended_movies[['movieId', 'title']].values.tolist()
 
@@ -88,7 +90,7 @@ def recommend_neighborhood(query, model, ratings, k=10):
    
     # 2. scoring
     # find n neighbors
-    similarity_scores, neighbor_ids = cosin_model.kneighbors(
+    similarity_scores, neighbor_ids = cos_sim_model.kneighbors(
     new_user_imputed,
     n_neighbors=5,
     return_distance=True)
@@ -105,6 +107,6 @@ def recommend_neighborhood(query, model, ratings, k=10):
     df_score = neighborhood_filtered.sum()
     df_score_ranked = df_score.sort_values(ascending=False).index.astype(int).tolist()[:k]
     recommendations = df_score_ranked[:k]
-    recommended_movies = titles[titles['movieId'].isin(recommendations)]
+    recommended_movies = title[title['movieId'].isin(recommendations)]
     
     return recommended_movies[['movieId', 'title']].values.tolist()
